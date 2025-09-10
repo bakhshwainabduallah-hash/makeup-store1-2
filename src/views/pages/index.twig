@@ -1,28 +1,7 @@
-{#
-  الصفحة الرئيسية – Noir Beauty (مستوحاة من ستايل سيفورا)
-#}
 {% extends "layouts.master" %}
 
 {% block content %}
-
-  {# هيرو أسود نظيف #}
-  {% include 'components/home/noir-hero.twig' with {
-    title: t('home.hero_title', 'جمال بالأسود والأبيض'),
-    subtitle: t('home.hero_subtitle', 'مستحضرات مختارة بعناية – اكتشفي الجديد والعروض'),
-    cta_label: t('home.shop_now', 'تسوّقي الآن'),
-    cta_url: '/products',
-    image: asset('images/noir-hero.jpg')
-  } %}
-
-  {# صف عروض مختصر #}
-  {% include 'components/home/noir-promo-row.twig' %}
-
-  {# أقسام رئيسية (تصنيفات/مجموعات) #}
-  {% include 'components/home/noir-categories.twig' %}
-
-  {# هنا يحقن البيلدر عناصر الصفحة من المحرّر إن وُجدت #}
   {# component home #}
-
 {% endblock %}
 
 {% block scripts %}
