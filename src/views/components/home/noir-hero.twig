@@ -1,0 +1,20 @@
+<section class="bg-black text-white">
+  <div class="container mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+        {{ title }}
+      </h1>
+      <p class="text-gray-300 mb-6 md:text-lg">
+        {{ subtitle }}
+      </p>
+      <a href="{{ cta_url }}" class="btn btn-primary !bg-white !text-black hover:!bg-gray-200 transition">
+        {{ cta_label }}
+      </a>
+    </div>
+    <div class="relative">
+      <img src="{{ image }}" alt="Hero" class="rounded-2xl shadow-xl w-full object-cover">
+      {# ملاحظة: ضع صورة باسم noir-hero.jpg داخل src/assets/images #}
+    </div>
+  </div>
+</section>
+

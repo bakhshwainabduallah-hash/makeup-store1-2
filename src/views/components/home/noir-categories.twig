@@ -1,0 +1,27 @@
+{# شبكة أقسام بسيطة – غيّر الروابط والصور لاحقاً #}
+<section class="container mx-auto px-4 pb-12">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xl md:text-2xl font-extrabold">{{ t('home.shop_by_category', 'تسوّق حسب الفئة') }}</h2>
+    <a href="/categories" class="text-sm underline">{{ t('common.view_all', 'عرض الكل') }}</a>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+    {% set cats = [
+      {title: 'ميك أب', url: '/categories', img: asset('images/cat1.jpg')},
+      {title: 'بشرة',  url: '/categories', img: asset('images/cat2.jpg')},
+      {title: 'عطور',  url: '/categories', img: asset('images/cat3.jpg')},
+      {title: 'شعر',   url: '/categories', img: asset('images/cat4.jpg')},
+      {title: 'أدوات', url: '/categories', img: asset('images/cat5.jpg')},
+      {title: 'هدايا', url: '/categories', img: asset('images/cat6.jpg')}
+    ] %}
+
+    {% for c in cats %}
+      <a href="{{ c.url }}" class="group block">
+        <div class="aspect-[1/1] overflow-hidden rounded-xl border">
+          <img src="{{ c.img }}" alt="{{ c.title }}" class="w-full h-full object-cover group-hover:scale-105 transition">
+        </div>
+        <div class="mt-2 text-center font-semibold">{{ c.title }}</div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

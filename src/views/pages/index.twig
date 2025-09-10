@@ -1,10 +1,30 @@
+{#
+  الصفحة الرئيسية – Noir Beauty (مستوحاة من ستايل سيفورا)
+#}
 {% extends "layouts.master" %}
 
 {% block content %}
-  <div class="container mx-auto p-8">
-    <h1 class="text-3xl font-bold">✅ الصفحة شغّالة — هذا محتوى ثابت من index.twig</h1>
-    <p class="text-gray-600">لو شفت هذا النص في المعاينة، فالوضع تمام وسبب الفراغ إن البيلدر فاضي.</p>
-  </div>
 
-  {# component home #}  {# لا تحذفه: هنا تنزل عناصر البيلدر #}
+  {# هيرو أسود نظيف #}
+  {% include 'components/home/noir-hero.twig' with {
+    title: t('home.hero_title', 'جمال بالأسود والأبيض'),
+    subtitle: t('home.hero_subtitle', 'مستحضرات مختارة بعناية – اكتشفي الجديد والعروض'),
+    cta_label: t('home.shop_now', 'تسوّقي الآن'),
+    cta_url: '/products',
+    image: asset('images/noir-hero.jpg')
+  } %}
+
+  {# صف عروض مختصر #}
+  {% include 'components/home/noir-promo-row.twig' %}
+
+  {# أقسام رئيسية (تصنيفات/مجموعات) #}
+  {% include 'components/home/noir-categories.twig' %}
+
+  {# هنا يحقن البيلدر عناصر الصفحة من المحرّر إن وُجدت #}
+  {# component home #}
+
+{% endblock %}
+
+{% block scripts %}
+  <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
