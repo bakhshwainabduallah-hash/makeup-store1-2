@@ -1,16 +1,36 @@
-<section class="container mx-auto px-4 py-12">
-  <div class="grid md:grid-cols-2 gap-8 items-center">
+<section class="bg-black text-white">
+  <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center py-12 px-4">
     <div>
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">
-        {{ t('home.hero_title', 'اطلالتك تبدأ من هنا') }}
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+        {{ t('home.hero_title', 'جمال بالأسود والأبيض') }}
       </h1>
-      <p class="text-gray-600 mb-6">
-        {{ t('home.hero_subtitle', 'مكياج مواسم جديدة — اكتشفي الأكثر مبيعًا') }}
+      <p class="mt-4 text-gray-300 md:text-lg">
+        {{ t('home.hero_subtitle', 'مستحضرات مختارة بعناية – اكتشفي الجديد والعروض') }}
       </p>
-      <a href="/products" class="btn btn-primary">
-        {{ t('home.shop_now', 'تسوقي الآن') }}
-      </a>
+
+      <div class="mt-6 flex gap-3">
+        <a href="/products" class="btn btn-primary">{{ t('home.shop_now', 'تسوّقي الآن') }}</a>
+        <a href="/collections/new" class="btn btn-outline">{{ t('common.view_all', 'عرض الكل') }}</a>
+      </div>
+
+      <ul class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <li class="bg-white/5 rounded-lg p-3">
+          <div class="font-semibold">{{ t('home.promo_shipping', 'شحن مجاني فوق 299 ر.س') }}</div>
+          <div class="text-gray-400 mt-1">{{ t('home.promo_shipping_desc', 'يصلك طلبك بسرعة مع تتبع الشحنة') }}</div>
+        </li>
+        <li class="bg-white/5 rounded-lg p-3">
+          <div class="font-semibold">{{ t('home.promo_newin', 'وصلنا حديثًا') }}</div>
+          <div class="text-gray-400 mt-1">{{ t('home.promo_newin_desc', 'أحدث الإصدارات في الجمال') }}</div>
+        </li>
+        <li class="bg-white/5 rounded-lg p-3">
+          <div class="font-semibold">{{ t('home.promo_offers', 'عروض مختارة') }}</div>
+          <div class="text-gray-400 mt-1">{{ t('home.promo_offers_desc', 'خصومات موسمية') }}</div>
+        </li>
+      </ul>
     </div>
-    <img src="https://picsum.photos/960/720" alt="Makeup" class="rounded-2xl shadow-lg w-full"/>
+
+    <div>
+      <img src="https://picsum.photos/960/720" class="rounded-2xl shadow-2xl w-full" alt="Sephora look"/>
+    </div>
   </div>
 </section>
