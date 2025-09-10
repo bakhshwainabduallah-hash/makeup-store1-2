@@ -1,15 +1,10 @@
-{#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
-#}
 {% extends "layouts.master" %}
+
 {% block content %}
-{% include 'components/home/hero.twig' %}
-    {% component home %}
-{% endblock %}
-{% block scripts %}
-    <script defer src="{{ 'home.js' | asset }}"></script>
+  <div class="container mx-auto p-8">
+    <h1 class="text-3xl font-bold">✅ الصفحة شغّالة — هذا محتوى ثابت من index.twig</h1>
+    <p class="text-gray-600">لو شفت هذا النص في المعاينة، فالوضع تمام وسبب الفراغ إن البيلدر فاضي.</p>
+  </div>
+
+  {# component home #}  {# لا تحذفه: هنا تنزل عناصر البيلدر #}
 {% endblock %}
